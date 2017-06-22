@@ -3,9 +3,12 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
-
+html{
+	height:100%;
+}
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+	height:100%;
 }
 
 .slide-image {
@@ -50,5 +53,46 @@ body {
 }
 
 footer {
-    margin: 50px 0;
+    margin: 0;
 }
+
+#loading{
+	height:50px;
+	width:50px;
+	border:5px solid #ccc;
+	border-top-color:#ff6a00;
+	border-bottom-color:#15b569;
+	border-radius:100%;
+	position:fixed;
+	left:0px;
+	right:0px;
+	top:0px;
+	bottom:0px;
+	margin:auto;
+	animation:spin 2s linear infinite;
+}
+@keyframes spin{
+  0% {
+   transform: rotate(0deg); 
+   }
+  100%{
+   transform: rotate(360deg);
+    }
+}
+
+.wrapper{
+	min-height:100%;
+	position:relative;
+}
+.content{
+	
+	padding-bottom:60px;
+}
+.footer{
+	position:absolute;
+	bottom:15px;
+	height:60px;
+}
+
+
+
