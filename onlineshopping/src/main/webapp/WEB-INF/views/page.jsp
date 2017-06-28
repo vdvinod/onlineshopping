@@ -7,7 +7,7 @@
 <spring:url var="css" value="/resources/css" />
 <spring:url var="js" value="/resources/js" />
 <spring:url var="images" value="/resources/images" />
-<spring:url var="contextRoot" value="" />
+<c:set var="contextRoot" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,14 +40,16 @@
 </head>
 
 <body>
+	<div id="loading"></div>
 	<div class="wrapper">
-		<span id="loading"></span>
+		
 		<!-- Navigation -->
 		<%@include file="./common/navbar.jsp"%>
 
 
 		<!-- Page Content -->
 		<div class="content">
+			
 			<c:if test="${userClickHome == true}">
 				<%@include file="home.jsp"%>
 			</c:if>
@@ -59,6 +61,11 @@
 			<c:if test="${userClickContact == true}">
 				<%@include file="contact.jsp"%>
 			</c:if>
+			
+			<c:if test="${userClickAllProducts == true or userClickCategoryProducts==true}">
+				<%@include file="listProduct.jsp"%>
+			</c:if>
+			
 		</div>
 
 		<!-- Footer -->
@@ -79,7 +86,7 @@
 </body>
 <script>
 	$(window).load(function() {
-		$("#loading").fadeOut(3000);
+		$("#loading").fadeOut();
 	});
 </script>
 </html>

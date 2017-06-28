@@ -63,13 +63,14 @@ footer {
 	border-top-color:#ff6a00;
 	border-bottom-color:#15b569;
 	border-radius:100%;
-	position:fixed;
+	position:absolute;
 	left:0px;
 	right:0px;
 	top:0px;
 	bottom:0px;
 	margin:auto;
 	animation:spin 2s linear infinite;
+	z-index:-1;
 }
 @keyframes spin{
   0% {
@@ -83,9 +84,9 @@ footer {
 .wrapper{
 	min-height:100%;
 	position:relative;
+	z-index:1;
 }
 .content{
-	
 	padding-bottom:60px;
 }
 .footer{
