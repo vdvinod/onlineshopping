@@ -27,7 +27,7 @@ public class PageController {
 		public ModelAndView about(){
 			ModelAndView mv = new ModelAndView("page");
 			mv.addObject("title","About Us");
-			mv.addObject("userClickAbout",true);
+			mv.addObject("userClickAbout",false);
 			return mv;
 		}
 		@RequestMapping(value="/contact")
@@ -56,5 +56,10 @@ public class PageController {
 			mv.addObject("categories",categoryService.categoryList());
 			mv.addObject("category",category);
 			return mv;
+		}
+		
+		@RequestMapping(value="/pdf")
+		public ModelAndView showPdf(){
+			return new ModelAndView("pdfView","data","wellcome vinod");
 		}
 }

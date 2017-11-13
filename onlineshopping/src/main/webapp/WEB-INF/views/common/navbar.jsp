@@ -22,6 +22,9 @@
                     <li id="contacts">
                         <a href="${contextRoot}/contact">Contact</a>
                     </li>
+                    <li id="contacts">
+                        <a href="${contextRoot}/pdf">Genrate Pdf</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
